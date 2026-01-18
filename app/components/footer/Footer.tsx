@@ -3,9 +3,9 @@ import { GLOBAL } from "@/data";
 export default function Footer() {
   const { locationIcon } = GLOBAL;
   return (
-    <footer>
-      <div className="bg-gray-800 text-gray-400 text-center py-8 text-xs">
-        <p className="flex items-center justify-center gap-1 pb-2">
+    <footer className="">
+      <div className="bg-gray-800 text-gray-400 text-center p-8 text-xs">
+        <p className="flex items-center justify-center gap-1 pb-2 text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -18,7 +18,7 @@ export default function Footer() {
           </svg>
           Av. Altamira #1003 Monte Alto
         </p>
-        <p className="text-gray-500">Yama Japanese Food © 2026</p>
+        <p className="text-gray-500 text-lg">Yama Japanese Food © 2026</p>
       </div>
     </footer>
   );
