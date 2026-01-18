@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MainNavbar from "./components/mainNavMenu/MainNavbar";
 import SecondNavbar from "./components/secondNavMenu/SecondNavbar";
+import Footer from "./components/footer/Footer";
+import WhatsAppBtn from "./components/whatsAppBtn/WhatsAppBtn";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <MainNavbar />
-        {children}
-
         <SecondNavbar />
+        {children}
+        <WhatsAppBtn />
+        <Footer />
       </body>
     </html>
   );
