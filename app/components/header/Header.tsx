@@ -1,4 +1,4 @@
-import { GLOBAL } from "@/data";
+import { GLOBAL } from "@/data/data";
 import Image from "next/image";
 import banner from "@/app/assets/banner.webp";
 export default function Header() {

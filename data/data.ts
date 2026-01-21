@@ -1,4 +1,6 @@
-import { SecondNavbarIcons } from "./types";
+import { BestSellerProduct, SecondNavbarIcons } from "./types";
+/* images */
+import trompoRoll from "@/app/assets/bestSeller/trompoRoll.webp";
 
 export const GLOBAL = {
   /* main navbar */
@@ -31,5 +33,36 @@ export const secondNavbarIcons: Array<SecondNavbarIcons> = [
     label: "Promos",
     path: "M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3z",
     link: "/promociones",
+  },
+];
+
+export const bestSellerProducts: Array<BestSellerProduct> = [
+  {
+    id: 1,
+    title: "Trompo Roll",
+    ingredients: "Carner al pastor, piña, queso, manchego, y aguacate",
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 2,
+    title: "Niña Fresa Roll",
+    ingredients: "Carner al pastor, piña, queso, manchego, y aguacate",
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 3,
+    title: "Arcoiris Roll",
+    ingredients: "Carner al pastor, piña, queso, manchego, y aguacate",
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 4,
+    title: "Classic Roll",
+    ingredients: "Carner al pastor, piña, queso, manchego, y aguacate",
+    price: 130,
+    image: trompoRoll,
   },
 ];

@@ -1,4 +1,4 @@
-import { GLOBAL } from "@/data";
+import { GLOBAL } from "@/data/data";
 import logo from "@/app/assets/logo.webp";
 import Link from "next/link";
 export default function MainNavbar() {

@@ -1,4 +1,4 @@
-import { secondNavbarIcons } from "@/data";
+import { secondNavbarIcons } from "@/data/data";
 import Link from "next/link";
 
 export default function SecondNavbar() {
