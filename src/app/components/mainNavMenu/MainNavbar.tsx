@@ -1,20 +1,12 @@
-import { GLOBAL } from "@/data/data";
+import { GLOBAL } from "@/data";
 import logo from "@/app/assets/logo.webp";
 import Link from "next/link";
+import HamburgerBtn from "./HamburgerBtn";
 export default function MainNavbar() {
-  const { hamburgerBtnIcon, shoppingCartIcon } = GLOBAL;
+  /* const { shoppingCartIcon } = GLOBAL; */
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between bg-white/90 px-5 py-3 shadow-sm backdrop-blur-md">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="35"
-        height="35"
-        fill="currentColor"
-        className=""
-        viewBox="0 0 16 16"
-      >
-        <path fillRule="evenodd" d={hamburgerBtnIcon} />
-      </svg>
+      <HamburgerBtn />
 
       <Link
         href="/"
@@ -29,7 +21,7 @@ export default function MainNavbar() {
         </span>
       </Link>
 
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width="35"
         height="35"
@@ -38,7 +30,7 @@ export default function MainNavbar() {
         viewBox="0 0 16 16"
       >
         <path d={shoppingCartIcon} />
-      </svg>
+      </svg> */}
     </nav>
   );
 }

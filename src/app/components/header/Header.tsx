@@ -1,6 +1,6 @@
-import { GLOBAL } from "@/data/data";
+import { GLOBAL } from "@/data";
 import Image from "next/image";
-import banner from "@/app/assets/banner.webp";
+import banner from "@/assets/banner.webp";
 export default function Header() {
   const { curveLineIcon } = GLOBAL;
   return (

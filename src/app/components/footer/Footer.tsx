@@ -1,4 +1,4 @@
-import { GLOBAL } from "@/data/data";
+import { GLOBAL } from "@/data";
 
 export default function Footer() {
   const { locationIcon } = GLOBAL;

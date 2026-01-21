@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import promosImage from "@/app/assets/promosImage.webp";
+import promosImage from "@/assets/promosImage.webp";
 
 export default function Offers() {
   return (
