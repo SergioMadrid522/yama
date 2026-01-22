@@ -5,14 +5,14 @@ import { useState } from "react";
 import MenuContent from "./MenuContent";
 
 export default function HamburgerBtn() {
-  const { hamburgerBtnIcon } = GLOBAL;
+  const { hamburgerBtnIcon, closeMenuIcon } = GLOBAL;
   const [openMenu, setOpenMenu] = useState(false);
   const handleClick = () => setOpenMenu(!openMenu);
 
   return (
     <>
       <button
-        className="bg-transparent cursor-pointer border-0"
+        className={`bg-transparent cursor-pointer border-0 ${openMenu ? "z-30" : ""}`}
         onClick={handleClick}
       >
         <svg
@@ -23,10 +23,14 @@ export default function HamburgerBtn() {
           className=""
           viewBox="0 0 16 16"
         >
-          <path fillRule="evenodd" d={hamburgerBtnIcon} />
+          <path
+            fillRule="evenodd"
+            d={openMenu ? closeMenuIcon : hamburgerBtnIcon}
+          />
         </svg>
       </button>
-      {openMenu && <MenuContent />}
+
+      <MenuContent openMenu={openMenu} />
     </>
   );
 }

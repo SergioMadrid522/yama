@@ -2,8 +2,10 @@
 
 - search-box filter between data
 - map the promos
-- make works the hamburger btn
+- shows randomly some products on search page, and make the search-box filters while user type
 
 # Fix
 
-hamburger button works, however has design issues
+# working
+
+Modal option works and already has design

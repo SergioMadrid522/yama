@@ -20,3 +20,7 @@ export interface BestSellerProduct {
   image: StaticImageData;
   promo?: boolean;
 }
+
+export type MenuContentProps = {
+  openMenu: boolean;
+};
