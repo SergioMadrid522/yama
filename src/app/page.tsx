@@ -4,10 +4,10 @@ import Offers from "./components/offers/Offers";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Header />
       <Offers />
       <BestSeller />
-    </>
+    </main>
   );
 }

@@ -6,6 +6,8 @@
 
 # Fix
 
+- search-box doesnt work
+
 # working
 
 Modal option works and already has design

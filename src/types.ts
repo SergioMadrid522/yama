@@ -11,9 +11,9 @@ export interface SecondNavbarIcons {
   link: string;
 }
 
-export interface BestSellerProduct {
+export interface Product {
   id: number;
-  title: string;
+  productName: string;
   ingredients: string; //This could be an array but cannot too, check it out
   category: string;
   price: number;

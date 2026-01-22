@@ -4,7 +4,7 @@ import promosImage from "@/assets/promosImage.webp";
 
 export default function RenderOffer() {
   return (
-    <article className="block">
+    <article className="block px-0 pt-8 pb-0">
       <Link href="/promociones" className="">
         <div className="relative rounded-xl overflow-hidden flex flex-col justify-center">
           <div className="absolute z-20 px-3 py-2">
