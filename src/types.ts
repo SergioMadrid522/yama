@@ -31,3 +31,9 @@ export interface Ubicacion {
   catchphrase: string;
   mapsLink: string;
 }
+
+export type Horario = {
+  day: string;
+  schedule?: string;
+  isOpen?: boolean;
+};

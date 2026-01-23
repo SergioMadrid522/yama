@@ -1,12 +1,12 @@
 # Missing or Working on
 
-- search-box filter between data
+- make the search-box filter among data
 - map the promos
-- shows randomly some products on search page, and make the search-box filters while user type
+- make the ui for the schedule, the schedule data is already on data.ts
 
 # Fix
 
-- search-box doesnt work
+- location missing design
 
 # working
 

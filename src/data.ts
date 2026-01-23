@@ -1,4 +1,5 @@
 import type {
+  Horario,
   MenuModalOption,
   Product,
   SecondNavbarIcons,
@@ -291,3 +292,13 @@ export const ubicacionData: Ubicacion = {
   catchphrase: "El punto exacto donde termina tu hambre.",
   mapsLink: "https://maps.app.goo.gl/iHvUtKTAGkuLztvC8",
 };
+
+export const horario: Array<Horario> = [
+  { day: "Lunes", isOpen: false },
+  { day: "Martes", schedule: "12:00pm - 6:00pm" },
+  { day: "Miercoles", schedule: "12:00pm - 6:00pm" },
+  { day: "Jueves", schedule: "12:00pm - 6:00pm" },
+  { day: "Viernes", schedule: "12:00pm - 6:00pm" },
+  { day: "Sábado", schedule: "12:00pm - 6:00pm" },
+  { day: "Domingo", schedule: "12:00pm - 6:00pm" },
+];
