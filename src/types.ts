@@ -24,3 +24,10 @@ export interface Product {
 export type MenuContentProps = {
   openMenu: boolean;
 };
+
+export interface Ubicacion {
+  title: string;
+  iframeLink: string;
+  catchphrase: string;
+  mapsLink: string;
+}

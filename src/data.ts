@@ -1,4 +1,9 @@
-import type { MenuModalOption, Product, SecondNavbarIcons } from "@/types";
+import type {
+  MenuModalOption,
+  Product,
+  SecondNavbarIcons,
+  Ubicacion,
+} from "@/types";
 /* images */
 import trompoRoll from "@/assets/bestSeller/trompoRoll.webp";
 import arcoirisRoll from "@/assets/bestSeller/arcoirisRoll.webp";
@@ -25,10 +30,9 @@ export const GLOBAL = {
 };
 
 export const menuModalOptions: Array<MenuModalOption> = [
-  { page: "Ubicación", link: "/location" },
+  { page: "Ubicación", link: "/ubicacion" },
   { page: "Horarios", link: "/horarios" },
-  { page: "Redes Sociales", link: "/redesSociales" },
-  { page: "Sobre Nosotros", link: "/about" },
+  { page: "Sobre Nosotros", link: "/acercaDeNosotros" },
 ];
 
 export const secondNavbarIcons: Array<SecondNavbarIcons> = [
@@ -279,3 +283,11 @@ export const products: Array<Product> = [
     promo: true,
   },
 ];
+
+export const ubicacionData: Ubicacion = {
+  title: "¿Donde nos encontramos?",
+  iframeLink:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4760.760642266678!2d-97.90856842384734!3d22.373655240230967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7fc521a119199%3A0xdf86e28798b2e7d3!2sYama!5e1!3m2!1ses!2smx!4v1769134873874!5m2!1ses!2smx",
+  catchphrase: "El punto exacto donde termina tu hambre.",
+  mapsLink: "https://maps.app.goo.gl/iHvUtKTAGkuLztvC8",
+};
