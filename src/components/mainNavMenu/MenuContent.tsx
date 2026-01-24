@@ -1,22 +1,36 @@
-import { menuModalOptions } from "@/data";
+import { GLOBAL } from "@/data";
+import ModalContent from "./ModalContent";
 import { MenuContentProps } from "@/types";
-import Link from "next/link";
 
-export default function MenuContent({ openMenu }: MenuContentProps) {
+export default function MenuContent({
+  openMenu,
+  setOpenMenu,
+}: MenuContentProps) {
+  const { hamburgerBtnIcon, closeMenuIcon } = GLOBAL;
+  const handleClick = () => setOpenMenu(!openMenu);
+
   return (
-    <div
-      className={`absolute top-0 left-0 flex h-dvh w-full items-center justify-center bg-white transition-opacity duration-300 ease-in-out
-        ${openMenu ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-    >
-      <ul className="flex flex-col items-center">
-        {menuModalOptions.map(({ page, link }) => (
-          <li key={page} className="py-3 ">
-            <Link href={link} className="text-2xl">
-              {page}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <button
+        className={`bg-transparent cursor-pointer border-0 ${openMenu ? "z-30" : ""}`}
+        onClick={handleClick}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          fill="currentColor"
+          className=""
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d={openMenu ? closeMenuIcon : hamburgerBtnIcon}
+          />
+        </svg>
+      </button>
+
+      <ModalContent openMenu={openMenu} setOpenMenu={setOpenMenu} />
+    </>
   );
 }

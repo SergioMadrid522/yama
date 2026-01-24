@@ -23,12 +23,14 @@ export interface Product {
 
 export type MenuContentProps = {
   openMenu: boolean;
+  setOpenMenu: (value: boolean) => void;
 };
 
 export interface Ubicacion {
-  title: string;
   iframeLink: string;
-  catchphrase: string;
+  title: string;
+  catchPhrase: string;
+  address: string;
   mapsLink: string;
 }
 
@@ -37,3 +39,9 @@ export type Horario = {
   schedule?: string;
   isOpen?: boolean;
 };
+
+export interface Features {
+  icon: string;
+  name: string;
+  label: string;
+}

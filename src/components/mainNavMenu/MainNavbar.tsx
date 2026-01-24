@@ -1,16 +1,22 @@
-import { GLOBAL } from "@/data";
-import logo from "@/app/assets/logo.webp";
+"use client";
+
+/* import { GLOBAL } from "@/data";
+import logo from "@/app/assets/logo.webp"; */
 import Link from "next/link";
-import HamburgerBtn from "./HamburgerBtn";
+import MenuContent from "./MenuContent";
+import { useState } from "react";
 export default function MainNavbar() {
   /* const { shoppingCartIcon } = GLOBAL; */
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between bg-white/90 px-5 py-3 shadow-sm backdrop-blur-md">
-      <HamburgerBtn />
+      <MenuContent openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
       <Link
         href="/"
         className="relative flex flex-col items-center justify-center"
+        onClick={() => setOpenMenu(false)}
       >
         <h1 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none">
           YAMA
