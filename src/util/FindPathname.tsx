@@ -42,7 +42,6 @@ export default function FindPathame() {
                 src={image}
                 alt={productName}
                 className="h-full w-full object-cover"
-                priority
               />
               <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/30 to-transparent" />
             </div>
