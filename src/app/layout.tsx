@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MainNavbar from "../components/mainNavMenu/MainNavbar";
@@ -21,7 +21,12 @@ export const metadata: Metadata = {
   description:
     "Menú oficial de Yama Japanese Food. Conoce nuestros platillos, precios y promociones vigentes. Ubicados en Altamira 1003, Monte Alto, 89608 Miramar, Tamps.",
 };
-
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 export default function RootLayout({
   children,
 }: Readonly<{

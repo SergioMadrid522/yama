@@ -59,3 +59,9 @@ export interface AboutData {
   team: string;
   since: number;
 }
+
+export type RenderProductsProps = {
+  query?: string;
+};
+
+export interface ProductCardProps extends Product {}
