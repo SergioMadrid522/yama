@@ -3,8 +3,8 @@ import { GLOBAL } from "@/data";
 export default function Footer() {
   const { locationIcon } = GLOBAL;
   return (
-    <footer className="">
-      <div className="bg-gray-800 text-gray-400 text-center p-8 text-xs">
+    <footer className="h-[210px]">
+      <div className="bg-gray-800 text-gray-400 h-full text-center p-8 text-xs">
         <p className="flex items-center justify-center gap-1 pb-2 text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
