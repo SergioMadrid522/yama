@@ -1,0 +1,347 @@
+import type {
+  AboutData,
+  Features,
+  Horario,
+  MenuModalOption,
+  Product,
+  SecondNavbarIcons,
+  Ubicacion,
+} from "@/types";
+/* images */
+import trompoRoll from "@/assets/bestSeller/trompoRoll.webp";
+import arcoirisRoll from "@/assets/bestSeller/arcoirisRoll.webp";
+import cheeseRoll from "@/assets/bestSeller/cheeseRoll.webp";
+import clasicRoll from "@/assets/bestSeller/clasicRoll.webp";
+import ninaFresaRoll from "@/assets/bestSeller/ninaFresaRoll.webp";
+
+export const GLOBAL = {
+  /* main navbar */
+  hamburgerBtnIcon:
+    "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5",
+  shoppingCartIcon:
+    "M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2",
+  closeMenuIcon:
+    "M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z",
+  /* header */
+  curveLineIcon: "M0 5 Q 25 0, 50 5 T 100 5",
+  /* footer */
+  locationIcon:
+    "M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6",
+  paperPlaneFly:
+    "M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9L229.2 276.1c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8l496.9-178z",
+  /* floating btn */
+  whatsappBtnIcon:
+    "M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232",
+  /* schedule page */
+  clock: {
+    clockHands:
+      "M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z",
+    circlePath:
+      "M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0",
+  },
+  /* about us */
+  quotesIcon:
+    "M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z",
+};
+
+export const menuModalOptions: Array<MenuModalOption> = [
+  { page: "Ubicación", link: "/ubicacion" },
+  { page: "Horarios", link: "/horario" },
+  { page: "Sobre Nosotros", link: "/about" },
+];
+
+export const secondNavbarIcons: Array<SecondNavbarIcons> = [
+  {
+    label: "Inicio",
+    path: "M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5",
+    link: "/",
+  },
+  {
+    label: "Buscar",
+    path: "M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0",
+    link: "/buscarProducto",
+  },
+  {
+    label: "Promos",
+    path: "M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3z",
+    link: "/promociones",
+  },
+];
+
+export const bestSellerProducts: Array<Product> = [
+  {
+    id: 1,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    promo: true,
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 2,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
+    promo: true,
+  },
+  {
+    id: 3,
+    productName: "Arcoiris Roll",
+    ingredients: "Salmón, camarón, masago, y aguacate.",
+    category: "Especialidades YAMA",
+    price: 130,
+    image: arcoirisRoll,
+  },
+  {
+    id: 4,
+    productName: "Classic Roll",
+    ingredients: "Queso crema, pepino y surimi",
+    category: "Clásicos (con alga por afuera)",
+    price: 130,
+    image: clasicRoll,
+    promo: true,
+  },
+  {
+    id: 5,
+    productName: "Chesse Roll",
+    ingredients:
+      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
+    category: "Tradicionales",
+    price: 130,
+    image: cheeseRoll,
+    promo: true,
+  },
+];
+
+export const products: Array<Product> = [
+  {
+    id: 1,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    promo: true,
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 2,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
+    promo: true,
+  },
+  {
+    id: 3,
+    productName: "Arcoiris Roll",
+    ingredients: "Salmón, camarón, masago, y aguacate.",
+    category: "Especialidades YAMA",
+    price: 130,
+    image: arcoirisRoll,
+  },
+  {
+    id: 4,
+    productName: "Classic Roll",
+    ingredients: "Queso crema, pepino y surimi",
+    category: "Clásicos (con alga por afuera)",
+    price: 130,
+    image: clasicRoll,
+    promo: true,
+  },
+  {
+    id: 5,
+    productName: "Chesse Roll",
+    ingredients:
+      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
+    category: "Tradicionales",
+    price: 130,
+    image: cheeseRoll,
+    promo: true,
+  },
+  {
+    id: 6,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    promo: true,
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 7,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
+    promo: true,
+  },
+  {
+    id: 8,
+    productName: "Arcoiris Roll",
+    ingredients: "Salmón, camarón, masago, y aguacate.",
+    category: "Especialidades YAMA",
+    price: 130,
+    image: arcoirisRoll,
+  },
+  {
+    id: 9,
+    productName: "Classic Roll",
+    ingredients: "Queso crema, pepino y surimi",
+    category: "Clásicos (con alga por afuera)",
+    price: 130,
+    image: clasicRoll,
+    promo: true,
+  },
+  {
+    id: 10,
+    productName: "Chesse Roll",
+    ingredients:
+      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
+    category: "Tradicionales",
+    price: 130,
+    image: cheeseRoll,
+    promo: true,
+  },
+  {
+    id: 11,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    promo: true,
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 12,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
+    promo: true,
+  },
+  {
+    id: 13,
+    productName: "Arcoiris Roll",
+    ingredients: "Salmón, camarón, masago, y aguacate.",
+    category: "Especialidades YAMA",
+    price: 130,
+    image: arcoirisRoll,
+  },
+  {
+    id: 14,
+    productName: "Classic Roll",
+    ingredients: "Queso crema, pepino y surimi",
+    category: "Clásicos (con alga por afuera)",
+    price: 130,
+    image: clasicRoll,
+    promo: true,
+  },
+  {
+    id: 15,
+    productName: "Chesse Roll",
+    ingredients:
+      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
+    category: "Tradicionales",
+    price: 130,
+    image: cheeseRoll,
+    promo: true,
+  },
+  {
+    id: 16,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    promo: true,
+    price: 130,
+    image: trompoRoll,
+  },
+  {
+    id: 17,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
+    promo: true,
+  },
+  {
+    id: 18,
+    productName: "Arcoiris Roll",
+    ingredients: "Salmón, camarón, masago, y aguacate.",
+    category: "Especialidades YAMA",
+    price: 130,
+    image: arcoirisRoll,
+  },
+  {
+    id: 19,
+    productName: "Classic Roll",
+    ingredients: "Queso crema, pepino y surimi",
+    category: "Clásicos (con alga por afuera)",
+    price: 130,
+    image: clasicRoll,
+    promo: true,
+  },
+  {
+    id: 20,
+    productName: "Chesse Roll",
+    ingredients:
+      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
+    category: "Tradicionales",
+    price: 130,
+    image: cheeseRoll,
+    promo: true,
+  },
+];
+
+export const ubicacionData: Ubicacion = {
+  iframeLink:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.469528789145!2d-97.90599350000002!3d22.373650300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7fc521a119199%3A0xdf86e28798b2e7d3!2sYama!5e0!3m2!1ses!2smx!4v1769225436008!5m2!1ses!2smx",
+  title: "Monte Alto",
+  catchPhrase: "El punto exacto donde termina tu hambre.",
+  address: "Altamira 1003, Monte Alto, 89608 Miramar, Tamps.",
+  mapsLink: "https://maps.app.goo.gl/iHvUtKTAGkuLztvC8",
+};
+
+export const features: Array<Features> = [
+  {
+    icon: "M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z",
+    name: "Estacionamiento",
+    label: "Gratis",
+  },
+  {
+    icon: "M8 16a.5.5 0 0 1-.5-.5v-1.293l-.646.647a.5.5 0 0 1-.707-.708L7.5 12.793V8.866l-3.4 1.963-.496 1.85a.5.5 0 1 1-.966-.26l.237-.882-1.12.646a.5.5 0 0 1-.5-.866l1.12-.646-.884-.237a.5.5 0 1 1 .26-.966l1.848.495L7 8 3.6 6.037l-1.85.495a.5.5 0 0 1-.258-.966l.883-.237-1.12-.646a.5.5 0 1 1 .5-.866l1.12.646-.237-.883a.5.5 0 1 1 .966-.258l.495 1.849L7.5 7.134V3.207L6.147 1.854a.5.5 0 1 1 .707-.708l.646.647V.5a.5.5 0 1 1 1 0v1.293l.647-.647a.5.5 0 1 1 .707.708L8.5 3.207v3.927l3.4-1.963.496-1.85a.5.5 0 1 1 .966.26l-.236.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.883.237a.5.5 0 1 1-.26.966l-1.848-.495L9 8l3.4 1.963 1.849-.495a.5.5 0 0 1 .259.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.236.883a.5.5 0 1 1-.966.258l-.495-1.849-3.4-1.963v3.927l1.353 1.353a.5.5 0 0 1-.707.708l-.647-.647V15.5a.5.5 0 0 1-.5.5z",
+    name: "A/C",
+    label: "Clima",
+  },
+];
+
+export const horario: Array<Horario> = [
+  { day: "Lunes", isClose: true },
+  { day: "Martes", schedule: "12:00pm - 6:00pm", promo: "3x2" },
+  { day: "Miercoles", schedule: "12:00pm - 6:00pm" },
+  { day: "Jueves", schedule: "12:00pm - 6:00pm", promo: "3x2" },
+  { day: "Viernes", schedule: "12:00pm - 6:00pm" },
+  { day: "Sábado", schedule: "12:00pm - 6:00pm" },
+  { day: "Domingo", schedule: "12:00pm - 6:00pm" },
+];
+
+export const aboutData: AboutData = {
+  years: 9,
+  tagline: "Construyendo una historia de sabor en Altamira.",
+  stats: [
+    { stat: "4.6", label: "Estrellas en Google Maps" },
+    { stat: "+20", label: "Platillos" },
+    { stat: "+10k", label: "Clientes" },
+  ],
+
+  signOff:
+    "Gracias por dejarnos ser parte de sus cenas, sus festejos y sus antojos durante casi una década. Vamos por muchos rollos más.",
+  team: "El equipo de YAMA",
+  since: 2017,
+};
