@@ -16,8 +16,8 @@ export default function Location() {
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-gray-50/50 to-transparent" />
       </div>
 
-      <section className="px-6 -mt-12 relative z-10">
-        <div className="bg-white rounded-[2rem] p-8 shadow-2xl shadow-gray-200/50 border border-gray-100 text-center relative overflow-hiddenl">
+      <section className="relative z-10 px-6 -mt-12 ">
+        <div className="bg-white rounded-[2rem] p-8 shadow-2xl shadow-gray-200/50 border border-gray-100 text-center relative overflow-hidden">
           <div className="relative w-16 h-16 bg-white border-3 border-[#322629]/10 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"

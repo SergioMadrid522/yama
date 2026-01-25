@@ -22,7 +22,7 @@ export default function RenderSchedule() {
         Nuestros horarios
       </h1>
 
-      {horario.map(({ day, schedule, isClose }) => (
+      {horario.map(({ day, schedule, isClose, promo }) => (
         <div
           key={day}
           className="grid grid-cols-2 items-center justify-center gap-5 py-2 border-b border-b-gray-500/30 text-lg text-center w-full last:border-b-0"
@@ -31,7 +31,7 @@ export default function RenderSchedule() {
             <div className="relative ">
               <p className="font-bold">{day}</p>
               <p className="absolute top-0 left-0 text-[14px] bg-[#4db7c7]/25 px-1 rounded-[5px] -rotate-45 animate-pulse">
-                3x2
+                {promo}
               </p>
             </div>
           ) : (

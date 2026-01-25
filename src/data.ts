@@ -1,4 +1,5 @@
 import type {
+  AboutData,
   Features,
   Horario,
   MenuModalOption,
@@ -38,12 +39,15 @@ export const GLOBAL = {
     circlePath:
       "M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0",
   },
+  /* about us */
+  quotesIcon:
+    "M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z",
 };
 
 export const menuModalOptions: Array<MenuModalOption> = [
   { page: "Ubicación", link: "/ubicacion" },
   { page: "Horarios", link: "/horario" },
-  { page: "Sobre Nosotros", link: "/acercaDeNosotros" },
+  { page: "Sobre Nosotros", link: "/about" },
 ];
 
 export const secondNavbarIcons: Array<SecondNavbarIcons> = [
@@ -319,10 +323,25 @@ export const features: Array<Features> = [
 
 export const horario: Array<Horario> = [
   { day: "Lunes", isClose: true },
-  { day: "Martes", schedule: "12:00pm - 6:00pm" },
+  { day: "Martes", schedule: "12:00pm - 6:00pm", promo: "3x2" },
   { day: "Miercoles", schedule: "12:00pm - 6:00pm" },
-  { day: "Jueves", schedule: "12:00pm - 6:00pm" },
+  { day: "Jueves", schedule: "12:00pm - 6:00pm", promo: "3x2" },
   { day: "Viernes", schedule: "12:00pm - 6:00pm" },
   { day: "Sábado", schedule: "12:00pm - 6:00pm" },
   { day: "Domingo", schedule: "12:00pm - 6:00pm" },
 ];
+
+export const aboutData: AboutData = {
+  years: 9,
+  tagline: "Construyendo una historia de sabor en Altamira.",
+  stats: [
+    { stat: "4.6", label: "Estrellas en Google Maps" },
+    { stat: "+20", label: "Platillos" },
+    { stat: "+10k", label: "Clientes" },
+  ],
+
+  signOff:
+    "Gracias por dejarnos ser parte de sus cenas, sus festejos y sus antojos durante casi una década. Vamos por muchos rollos más.",
+  team: "El equipo de YAMA",
+  since: 2017,
+};

@@ -34,14 +34,28 @@ export interface Ubicacion {
   mapsLink: string;
 }
 
-export type Horario = {
+export interface Horario {
   day: string;
   schedule?: string;
   isClose?: boolean;
-};
+  promo?: string;
+}
 
 export interface Features {
   icon: string;
   name: string;
   label: string;
+}
+
+export interface AboutData {
+  years: number;
+  tagline: string;
+  stats: {
+    stat: string;
+    label: string;
+  }[];
+
+  signOff: string;
+  team: string;
+  since: number;
 }
