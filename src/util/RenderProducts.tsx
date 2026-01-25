@@ -48,14 +48,17 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
       </>
     );
   }
-
   const productsToShow = isSearching ? filteredProducts : defaultList;
+  const sectionTitle = isSearching
+    ? "Productos relacionados"
+    : "Descubre algo delicioso";
 
   return (
     <section className="px-5">
       <h2 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none text-center">
-        Productos relacionados
+        {sectionTitle}
       </h2>
+
       {productsToShow.map((product) => (
         <ProductCard key={product.id} {...product} />
       ))}

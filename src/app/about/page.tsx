@@ -34,13 +34,13 @@ export default function About() {
             </div>
             <p className="text-lg">
               Lo que comenzó hace 9 años como un pequeño sueño, hoy es el lugar
-              favorito de miles en Monte Alto y la Zona Conurbada.
+              favorito de muchísimas personas en Monte Alto y la Zona Conurbada.
             </p>
             <p className="text-lg">
               En Yama, creemos que el sushi no tiene que ser pretencioso para
-              ser delicioso. Nuestra misión siempre ha sido simple: ingredientes
-              frescos, porciones generosas y ese toque casero que nos hace
-              únicos."
+              ser delicioso. Nuestra <strong>misión</strong> siempre ha sido
+              simple: ingredientes frescos, porciones generosas y ese toque
+              casero que nos hace únicos."
             </p>
 
             <div className="grid grid-cols-3 border-t border-b border-gray-500/20 ">

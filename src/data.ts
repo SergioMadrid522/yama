@@ -324,7 +324,7 @@ export const features: Array<Features> = [
 export const horario: Array<Horario> = [
   { day: "Lunes", isClose: true },
   { day: "Martes", schedule: "12:00pm - 6:00pm", promo: "3x2" },
-  { day: "Miercoles", schedule: "12:00pm - 6:00pm" },
+  { day: "Miércoles", schedule: "12:00pm - 6:00pm" },
   { day: "Jueves", schedule: "12:00pm - 6:00pm", promo: "3x2" },
   { day: "Viernes", schedule: "12:00pm - 6:00pm" },
   { day: "Sábado", schedule: "12:00pm - 6:00pm" },
@@ -341,7 +341,7 @@ export const aboutData: AboutData = {
   ],
 
   signOff:
-    "Gracias por dejarnos ser parte de sus cenas, sus festejos y sus antojos durante casi una década. Vamos por muchos rollos más.",
+    "Gracias por dejarnos ser parte de sus comidas y sus antojos durante casi una década. Vamos por muchos rollos más.",
   team: "El equipo de YAMA",
   since: 2017,
 };
