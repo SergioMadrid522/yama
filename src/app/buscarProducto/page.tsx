@@ -24,13 +24,7 @@ export default function SearchPage() {
         </div>
       </form>
 
-      {query ? (
-        <div>
-          <RenderProducts query={query} />
-        </div>
-      ) : (
-        <RenderProducts />
-      )}
+      {query ? <RenderProducts query={query} /> : <RenderProducts />}
     </main>
   );
 }
