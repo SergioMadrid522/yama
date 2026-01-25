@@ -37,7 +37,7 @@ export interface Ubicacion {
 export type Horario = {
   day: string;
   schedule?: string;
-  isOpen?: boolean;
+  isClose?: boolean;
 };
 
 export interface Features {
