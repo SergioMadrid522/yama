@@ -1,6 +1,5 @@
 "use client";
 import RenderProducts from "@/util/RenderProducts";
-import { products } from "@/data";
 import { useState } from "react";
 
 export default function SearchPage() {

@@ -6,12 +6,16 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { RenderProductsProps } from "@/types";
 import ProductCard from "./ProductCard";
+
 export default function RenderProducts({ query = "" }: RenderProductsProps) {
   const pathname = usePathname();
+
   const [shuffledProducts, setShuffledProducts] = useState<typeof products>([]);
   const normalizedQuery = query.trim().toLowerCase();
+
   const defaultList =
     pathname === "/" ? bestSellerProducts : shuffledProducts.slice(0, 10);
+
   const isSearching = normalizedQuery.length > 0;
 
   useEffect(() => {
@@ -49,14 +53,14 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
     );
   }
   const productsToShow = isSearching ? filteredProducts : defaultList;
-  const sectionTitle = isSearching
-    ? "Productos relacionados"
-    : "Descubre algo delicioso";
+  const sectionTitle = isSearching ? "Productos relacionados" : "";
+  const notSearchingTitle =
+    pathname === "/buscarProducto" && "Descubre algo delicioso";
 
   return (
     <section className="px-5">
       <h2 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none text-center">
-        {sectionTitle}
+        {sectionTitle || notSearchingTitle}
       </h2>
 
       {productsToShow.map((product) => (
