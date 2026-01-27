@@ -42,6 +42,8 @@ export const GLOBAL = {
   /* about us */
   quotesIcon:
     "M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z",
+  facebookLink: "https://www.facebook.com/share/1Kfzijwb6n/?mibextid=wwXIfr",
+  phoneNumber: "528332350082",
 };
 
 export const menuModalOptions: Array<MenuModalOption> = [
@@ -295,6 +297,64 @@ export const products: Array<Product> = [
     category: "Tradicionales",
     price: 130,
     image: cheeseRoll,
+    promo: true,
+  },
+];
+
+export const promos: Array<Product> = [
+  {
+    id: 1,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    price: 130,
+    image: trompoRoll,
+    promo: true,
+  },
+  {
+    id: 2,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
+    promo: true,
+  },
+  {
+    id: 3,
+    productName: "Classic Roll",
+    ingredients: "Queso crema, pepino y surimi",
+    category: "Clásicos (con alga por afuera)",
+    price: 130,
+    image: clasicRoll,
+    promo: true,
+  },
+  {
+    id: 4,
+    productName: "Chesse Roll",
+    ingredients:
+      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
+    category: "Tradicionales",
+    price: 130,
+    image: cheeseRoll,
+    promo: true,
+  },
+  {
+    id: 5,
+    productName: "Trompo Roll",
+    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
+    category: "Empanizados Especiales",
+    price: 130,
+    image: trompoRoll,
+    promo: true,
+  },
+  {
+    id: 6,
+    productName: "Niña Fresa Roll",
+    ingredients: "Queso crema, plátano, cereza mango y fresa.",
+    category: "Frutales",
+    price: 130,
+    image: ninaFresaRoll,
     promo: true,
   },
 ];
