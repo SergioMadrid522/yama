@@ -1,11 +1,20 @@
 import { GLOBAL } from "@/data";
 
 export default function WhatsAppBtn() {
-  const { whatsappBtnIcon } = GLOBAL;
+  const { whatsappBtnIcon, phoneNumber } = GLOBAL;
+  const url = `https://wa.me/${phoneNumber}`;
   return (
     <a
-      href="#"
-      className="fixed bottom-28 right-6 bg-green-500 text-white w-15 h-15 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition z-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]"
+      aria-label="Chatear por WhatsApp"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        fixed bottom-28 right-6 
+        bg-green-500 text-white 
+        w-15 h-15 rounded-full shadow-2xl 
+        flex items-center justify-center 
+        hover:scale-110 transition z-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

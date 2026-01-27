@@ -1,34 +1,13 @@
 "use client";
 
-import { bestSellerProducts, products } from "@/data";
-
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { RenderProductsProps } from "@/types";
 import ProductCard from "./ProductCard";
+import { RenderProductsProps } from "@/types";
+import { useProducts } from "@/hooks/useProducts";
+
 export default function RenderProducts({ query = "" }: RenderProductsProps) {
-  const pathname = usePathname();
-  const [shuffledProducts, setShuffledProducts] = useState<typeof products>([]);
-  const normalizedQuery = query.trim().toLowerCase();
-  const defaultList =
-    pathname === "/" ? bestSellerProducts : shuffledProducts.slice(0, 10);
-  const isSearching = normalizedQuery.length > 0;
+  const { products, title, isSearching, hasResults } = useProducts(query);
 
-  useEffect(() => {
-    const shuffled = [...products].sort(() => Math.random() - 0.5);
-    setShuffledProducts(shuffled);
-  }, []);
-
-  const filteredProducts = isSearching
-    ? products.filter((product) => {
-        return (
-          product.productName.toLowerCase().includes(normalizedQuery) ||
-          product.ingredients.toLowerCase().includes(normalizedQuery)
-        );
-      })
-    : [];
-
-  if (isSearching && filteredProducts.length === 0) {
+  if (isSearching && !hasResults) {
     return (
       <>
         <h2 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none text-center">
@@ -48,18 +27,12 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
       </>
     );
   }
-  const productsToShow = isSearching ? filteredProducts : defaultList;
-  const sectionTitle = isSearching
-    ? "Productos relacionados"
-    : "Descubre algo delicioso";
 
   return (
     <section className="px-5">
-      <h2 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none text-center">
-        {sectionTitle}
-      </h2>
+      <h2 className="text-3xl font-black text-center">{title}</h2>
 
-      {productsToShow.map((product) => (
+      {products.map((product) => (
         <ProductCard key={product.id} {...product} />
       ))}
     </section>
