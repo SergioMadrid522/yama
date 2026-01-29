@@ -1,6 +1,5 @@
 "use client";
 import RenderProducts from "@/util/RenderProducts";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function SearchPage() {
@@ -8,7 +7,6 @@ export default function SearchPage() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
   };
-  const pathname = usePathname();
 
   return (
     <main>
