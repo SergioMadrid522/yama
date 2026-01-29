@@ -1,7 +1,6 @@
 import type {
   AboutData,
   Features,
-  FilterOptions,
   Horario,
   MenuModalOption,
   SecondNavbarIcons,
@@ -38,6 +37,8 @@ export const GLOBAL = {
     "M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z",
   facebookLink: "https://www.facebook.com/share/1Kfzijwb6n/?mibextid=wwXIfr",
   phoneNumber: "528332350082",
+  whatsAppDefaultMsg:
+    "Hola, vengo de su Menú Digital y me gustaría hacer un pedido.",
 };
 
 export const menuModalOptions: Array<MenuModalOption> = [
@@ -101,7 +102,7 @@ export const aboutData: AboutData = {
   tagline: "Construyendo una historia de sabor en Altamira.",
   stats: [
     { stat: "4.6", label: "Estrellas en Google Maps" },
-    { stat: "+20", label: "Platillos" },
+    { stat: "+90", label: "Platillos" },
     { stat: "+10k", label: "Clientes" },
   ],
 
@@ -110,12 +111,3 @@ export const aboutData: AboutData = {
   team: "El equipo de YAMA",
   since: 2017,
 };
-
-export const filterOptions: Array<FilterOptions> = [
-  { id: "Todo", icon: "🏠", label: "Todo", bgColor: "" },
-  { id: "Sushis", icon: "🍣", label: "Sushis", bgColor: "" },
-  { id: "Platillos", icon: "🥘", label: "Platillos", bgColor: "" },
-  { id: "Entradas", icon: "🥟", label: "Entradas", bgColor: "" },
-  { id: "Nigiri y Conos", icon: "🍙", label: "Nigiri y Conos", bgColor: "" },
-  { id: "Bebidas", icon: "🥤", label: "Bebidas", bgColor: "" },
-];

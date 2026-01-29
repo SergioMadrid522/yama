@@ -1,9 +1,12 @@
 "use client";
+import { useRandomOption } from "@/hooks/useRandomOption";
 import RenderProducts from "@/util/RenderProducts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function SearchPage() {
+  const option = useRandomOption();
   const [query, setQuery] = useState("");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
   };
@@ -14,7 +17,7 @@ export default function SearchPage() {
         <div className="px-5 py-10">
           <input
             type="text"
-            placeholder="¿Qué estás buscando?"
+            placeholder={`${option}`}
             className="w-full p-3 text-[18px] rounded-xl outline-1 outline-gray-300"
             value={query}
             onChange={handleInputChange}

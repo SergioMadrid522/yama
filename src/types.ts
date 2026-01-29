@@ -66,10 +66,3 @@ export type RenderProductsProps = {
 
 export interface ProductCardProps extends Product {}
 //export type ProductCardProps = Product
-
-export type FilterOptions = {
-  id: string;
-  icon: string;
-  label: string;
-  bgColor: string;
-};

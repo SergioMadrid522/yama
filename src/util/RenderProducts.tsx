@@ -16,11 +16,10 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
         <div className="flex w-full flex-col items-center justify-center text-center px-4 py-10 min-h-[50vh] md:min-h-[400px]">
           <div className="max-w-md mx-auto space-y-4">
             <p className="text-xl md:text-2xl font-semibold text-gray-600">
-              No encontramos nada con ${query}
+              No encontramos nada con "{query}"
             </p>
             <p className="text-sm md:text-base text-gray-400">
-              Intenta buscar por otro ingrediente o usando el nombre del
-              producto
+              Intenta buscar por ingrediente, categoría o nombre del producto.
             </p>
           </div>
         </div>

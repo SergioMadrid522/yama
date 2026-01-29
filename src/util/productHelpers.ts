@@ -6,18 +6,18 @@ export function shuffleProducts() {
 }
 
 export function filterProducts(list: Product[], query: string) {
+  const lowerQuery = query.toLowerCase().trim();
   return list.filter(
     (product) =>
-      product.productName.toLowerCase().includes(query) ||
-      product.ingredients.toLowerCase().includes(query) ||
-      product.category.toLowerCase().includes(query),
+      product.productName.toLowerCase().includes(lowerQuery) ||
+      product.ingredients.toLowerCase().includes(lowerQuery) ||
+      product.category.toLowerCase().includes(lowerQuery),
   );
 }
 
 export function getDefaultList(pathname: string, shuffled: Product[]) {
   if (pathname === "/") return bestSellerProducts;
-  if (pathname === "/promociones") return promos;
-  return shuffled.slice(0, 10);
+  return shuffled.slice(0, 6);
 }
 
 export function getSectionTitle(pathname: string, isSearching: boolean) {
