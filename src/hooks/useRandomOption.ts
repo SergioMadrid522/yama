@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 export function useRandomOption(): string {
   const searchOptions = [
     "Rollos",
-    "Platillos",
     "Guisos",
     "Entradas",
-    "Bebidas y postres",
+    "Bebidas",
     "Buscar por ingredientes",
     "Surimi Roll",
     "Chop Suey",
@@ -18,7 +17,7 @@ export function useRandomOption(): string {
     "Kushiages",
     "Nori Maki",
   ];
-  const [option, setOption] = useState("");
+  const [option, setOption] = useState("¿Qué quieres para comer hoy?");
 
   useEffect(() => {
     const interval = setInterval(() => {

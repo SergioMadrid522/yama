@@ -3,7 +3,7 @@ import { GLOBAL } from "@/data";
 export default function WhatsAppBtn() {
   const { whatsappBtnIcon, phoneNumber, whatsAppDefaultMsg } = GLOBAL;
   const encodedMesage = encodeURIComponent(whatsAppDefaultMsg);
-  const url = `https://wa.me/${phoneNumber}?text${encodedMesage}`;
+  const url = `https://wa.me/${phoneNumber}?text=${encodedMesage}`;
 
   return (
     <a

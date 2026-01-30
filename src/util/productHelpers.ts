@@ -7,12 +7,17 @@ export function shuffleProducts() {
 
 export function filterProducts(list: Product[], query: string) {
   const lowerQuery = query.toLowerCase().trim();
-  return list.filter(
-    (product) =>
+  return list.filter((product) => {
+    const matchCategory = product.category.some((cat) =>
+      cat.includes(lowerQuery),
+    );
+
+    return (
       product.productName.toLowerCase().includes(lowerQuery) ||
       product.ingredients.toLowerCase().includes(lowerQuery) ||
-      product.category.toLowerCase().includes(lowerQuery),
-  );
+      matchCategory
+    );
+  });
 }
 
 export function getDefaultList(pathname: string, shuffled: Product[]) {
@@ -26,3 +31,25 @@ export function getSectionTitle(pathname: string, isSearching: boolean) {
   if (pathname === "/buscarProducto") return "Descubre algo delicioso";
   return "";
 }
+
+/* 
+
+export function filterProducts(list: Product[], query: string) {
+  const lowerQuery = query.toLowerCase().trim();
+
+  return list.filter((product) => {
+    const matchCategory = product.category.some((cat) =>
+      cat.includes(lowerQuery)
+    );
+
+    return (
+      product.productName.toLowerCase().includes(lowerQuery) ||
+      product.ingredients.toLowerCase().includes(lowerQuery) ||
+      matchCategory
+    );
+  });
+}
+
+
+
+*/
