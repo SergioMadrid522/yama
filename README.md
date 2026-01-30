@@ -1,6 +1,6 @@
 # Missing
 
-- make the app responsive for desktop and tablets
+- promos section is not working
 
 # Working on
 

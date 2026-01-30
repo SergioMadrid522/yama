@@ -12,7 +12,7 @@ export default function SearchPage() {
   };
 
   return (
-    <main>
+    <main className="px-5 pt-2 md:px-10 md:pt-0 lg:px-20 lg:pt-0">
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="px-5 py-10">
           <input

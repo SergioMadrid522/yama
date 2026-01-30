@@ -10,11 +10,12 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
   if (isSearching && !hasResults) {
     return (
       <>
-        <h2 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none text-center">
+        <h2 className="font-sans font-[900] text-3xl md:text-4xl tracking-tighter text-gray-900 select-none text-center mb-6">
           Oops...
         </h2>
-        <div className="flex w-full flex-col items-center justify-center text-center px-4 py-10 min-h-[50vh] md:min-h-[400px]">
-          <div className="max-w-md mx-auto space-y-4">
+
+        <div className="flex w-full flex-col items-center justify-center text-center min-h-[50vh] md:min-h-[400px]">
+          <div className="max-w-md space-y-4">
             <p className="text-xl md:text-2xl font-semibold text-gray-600">
               No encontramos nada con "{query}"
             </p>
@@ -28,12 +29,16 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
   }
 
   return (
-    <section className="px-5">
-      <h2 className="text-3xl font-black text-center">{title}</h2>
+    <>
+      <h2 className="text-3xl md:text-4xl font-black text-center mb-6">
+        {title}
+      </h2>
 
-      {products.map((product: Product) => (
-        <ProductCard key={product.id} {...product} />
-      ))}
-    </section>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+        {products.map((product: Product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </div>
+    </>
   );
 }

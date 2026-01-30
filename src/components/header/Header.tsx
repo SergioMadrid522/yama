@@ -1,23 +1,65 @@
 import { GLOBAL } from "@/data";
 import Image from "next/image";
 import banner from "@/assets/banner.webp";
+
 export default function Header() {
   const { curveLineIcon } = GLOBAL;
+
   return (
-    <header>
-      <div className="relative flex flex-row">
-        <div className="relative w-3xl">
-          <div className="brightness-75">
-            <Image src={banner} alt="" priority />
+    <header
+      className="
+        w-full
+        md:h-[70vh]
+        lg:h-[500px]
+      "
+    >
+      <div className="relative flex flex-row h-full">
+        <div className="relative w-full">
+          <div className="brightness-75 h-full">
+            <Image
+              src={banner}
+              alt=""
+              priority
+              className="object-cover w-full h-full"
+            />
           </div>
 
-          <div className="absolute z-10 inset-0 flex flex-col items-center justify-center">
-            <h1 className="text-white font-brand font-black text-3xl md:text-4xl leading-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-3">
+          <div
+            className="
+              absolute inset-0 z-10
+              flex flex-col items-center justify-center
+              px-4
+              md:px-10
+              lg:px-20
+            "
+          >
+            <h1
+              className="
+                text-white font-brand font-black
+                text-3xl
+                md:text-4xl
+                lg:text-5xl
+                leading-tight
+                drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]
+                mb-4
+              "
+            >
               ¡Bienvenido!
             </h1>
-            <p className="text-white font-brand font-black  drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-3 leading-relaxed">
+
+            <p
+              className="
+                text-white font-brand font-black
+                text-base
+                md:text-lg
+                lg:text-xl
+                leading-relaxed
+                text-center
+                drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]
+              "
+            >
               Descubre el{" "}
-              <span className="text-[#4FD1C5] text-xl relative drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+              <span className="text-[#4FD1C5] relative inline-block">
                 verdadero
                 <svg
                   className="absolute -bottom-1.5 left-0 w-full"
@@ -32,7 +74,7 @@ export default function Header() {
                     fill="none"
                   />
                 </svg>
-              </span>{" "}
+              </span>
               <br />
               sabor japonés en Altamira
             </p>

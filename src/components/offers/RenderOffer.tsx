@@ -6,7 +6,7 @@ export default function RenderOffer() {
   return (
     <article className="my-4 overflow-hidden rounded-xl shadow-xl">
       <Link href="/promociones" className="">
-        <div className="relative flex h-52 bg-gray-900">
+        <div className="relative flex h-52 bg-black/40 backdrop-blur-md">
           <div className="relative z-10 flex w-full flex-col justify-center px-5 md:w-1/2">
             <h3 className="text-white font-brand font-black text-3xl md:text-4xl leading-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-3">
               Sushi 3x2
