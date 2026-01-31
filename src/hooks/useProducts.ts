@@ -24,17 +24,19 @@ export function useProducts(query: string) {
 
   let filtered: typeof products = [];
 
-  if (isSearching && pathname === "/buscarProducto") {
-    filtered = filterProducts(products, normalizedQuery);
-  }
-
   if (isSearching && pathname === "/promociones") {
     filtered = filterProducts(promos, normalizedQuery);
   }
 
+  if (isSearching && pathname === "/buscarProducto") {
+    filtered = filterProducts(products, normalizedQuery);
+  }
+
   const productsToShow = isSearching
     ? filtered
-    : getDefaultList(pathname, shuffled);
+    : pathname === "/promociones"
+      ? promos.slice(0, 6)
+      : getDefaultList(pathname, shuffled);
 
   const title = getSectionTitle(pathname, isSearching);
 

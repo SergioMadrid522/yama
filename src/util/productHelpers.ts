@@ -5,16 +5,27 @@ export function shuffleProducts() {
   return [...products].sort(() => Math.random() - 0.5);
 }
 
+function normalizeText(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD") // separa letras de acentos
+    .replace(/[\u0300-\u036f]/g, ""); // elimina los acentos
+}
+
 export function filterProducts(list: Product[], query: string) {
-  const lowerQuery = query.toLowerCase().trim();
+  const normalizedQuery = normalizeText(query);
+
   return list.filter((product) => {
+    const name = normalizeText(product.productName);
+    const ingredients = normalizeText(product.ingredients);
+
     const matchCategory = product.category.some((cat) =>
-      cat.includes(lowerQuery),
+      normalizeText(cat).includes(normalizedQuery),
     );
 
     return (
-      product.productName.toLowerCase().includes(lowerQuery) ||
-      product.ingredients.toLowerCase().includes(lowerQuery) ||
+      name.includes(normalizedQuery) ||
+      ingredients.includes(normalizedQuery) ||
       matchCategory
     );
   });
@@ -22,6 +33,7 @@ export function filterProducts(list: Product[], query: string) {
 
 export function getDefaultList(pathname: string, shuffled: Product[]) {
   if (pathname === "/") return bestSellerProducts;
+
   return shuffled.slice(0, 6);
 }
 
@@ -31,25 +43,3 @@ export function getSectionTitle(pathname: string, isSearching: boolean) {
   if (pathname === "/buscarProducto") return "Descubre algo delicioso";
   return "";
 }
-
-/* 
-
-export function filterProducts(list: Product[], query: string) {
-  const lowerQuery = query.toLowerCase().trim();
-
-  return list.filter((product) => {
-    const matchCategory = product.category.some((cat) =>
-      cat.includes(lowerQuery)
-    );
-
-    return (
-      product.productName.toLowerCase().includes(lowerQuery) ||
-      product.ingredients.toLowerCase().includes(lowerQuery) ||
-      matchCategory
-    );
-  });
-}
-
-
-
-*/

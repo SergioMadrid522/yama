@@ -30,7 +30,7 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
 
   return (
     <>
-      <h2 className="text-3xl md:text-4xl font-black text-center mb-6">
+      <h2 className="text-3xl md:text-4xl font-black text-center mb-6 mt-0">
         {title}
       </h2>
 
