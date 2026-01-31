@@ -6,6 +6,7 @@ import SecondNavbar from "../components/secondNavMenu/SecondNavbar";
 import Footer from "../components/footer/Footer";
 import WhatsAppBtn from "../components/whatsAppBtn/WhatsAppBtn";
 import GoToTop from "@/components/goToTop/GoToTop";
+import { ModalProvider } from "@/hooks/ModalProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,13 +39,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-0 h-0" id="pageTop"></div>
-        <MainNavbar />
-        <SecondNavbar />
-        {children}
-        <GoToTop />
-        <WhatsAppBtn />
-        <Footer />
+        <ModalProvider>
+          <div className="w-0 h-0" id="pageTop"></div>
+          <MainNavbar />
+          <SecondNavbar />
+          {children}
+          <GoToTop />
+          <WhatsAppBtn />
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );

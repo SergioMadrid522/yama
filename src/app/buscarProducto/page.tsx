@@ -11,18 +11,8 @@ export default function SearchPage() {
     setQuery(e.target.value);
   };
 
-  const dismissKeyboard = () => {
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
-  };
-
   return (
-    <main
-      className="px-5 pt-2 md:px-10 md:pt-0 lg:px-20 lg:pt-0"
-      onTouchStart={dismissKeyboard}
-      onWheel={dismissKeyboard}
-    >
+    <main className="px-5 pt-2 md:px-10 md:pt-0 lg:px-20 lg:pt-0">
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="px-5 py-5">
           <input

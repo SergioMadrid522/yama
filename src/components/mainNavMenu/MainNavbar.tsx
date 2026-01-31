@@ -5,9 +5,12 @@ import logo from "@/app/assets/logo.webp"; */
 import Link from "next/link";
 import MenuContent from "./MenuContent";
 import { useState } from "react";
+import { useModal } from "@/hooks/ModalProvider";
+
 export default function MainNavbar() {
   /* const { shoppingCartIcon } = GLOBAL; */
-  const [openMenu, setOpenMenu] = useState(false);
+  //const [openMenu, setOpenMenu] = useState(false);
+  const { openMenu, setOpenMenu } = useModal();
 
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between bg-white/90 px-5 py-3 shadow-sm backdrop-blur-md">

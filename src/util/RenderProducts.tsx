@@ -6,7 +6,11 @@ import { useProducts } from "@/hooks/useProducts";
 
 export default function RenderProducts({ query = "" }: RenderProductsProps) {
   const { products, title, isSearching, hasResults } = useProducts(query);
-
+  const dismissKeyboard = () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  };
   if (isSearching && !hasResults) {
     return (
       <>
@@ -30,11 +34,19 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
 
   return (
     <>
-      <h2 className="text-3xl md:text-4xl font-black text-center mb-6 mt-0">
+      <h2
+        className="text-3xl md:text-4xl font-black text-center mb-6 mt-0"
+        onTouchStart={dismissKeyboard}
+        onWheel={dismissKeyboard}
+      >
         {title}
       </h2>
 
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"
+        onTouchStart={dismissKeyboard}
+        onWheel={dismissKeyboard}
+      >
         {products.map((product: Product) => (
           <ProductCard key={product.id} {...product} />
         ))}
