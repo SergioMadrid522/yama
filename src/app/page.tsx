@@ -1,3 +1,4 @@
+import GoToTop from "@/components/goToTop/GoToTop";
 import BestSeller from "../components/bestSeller/BestSeller";
 import Header from "../components/header/Header";
 import Offers from "../components/offers/Offers";

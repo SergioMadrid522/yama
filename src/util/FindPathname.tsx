@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { bestSellerProducts, products } from "@/data";
+import { bestSellerProducts, products } from "@/products.data";
 import PromoBadge from "@/util/PromoBadge";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";

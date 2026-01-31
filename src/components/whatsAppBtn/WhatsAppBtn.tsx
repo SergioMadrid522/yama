@@ -1,8 +1,10 @@
 import { GLOBAL } from "@/data";
 
 export default function WhatsAppBtn() {
-  const { whatsappBtnIcon, phoneNumber } = GLOBAL;
-  const url = `https://wa.me/${phoneNumber}`;
+  const { whatsappBtnIcon, phoneNumber, whatsAppDefaultMsg } = GLOBAL;
+  const encodedMesage = encodeURIComponent(whatsAppDefaultMsg);
+  const url = `https://wa.me/${phoneNumber}?text=${encodedMesage}`;
+
   return (
     <a
       aria-label="Chatear por WhatsApp"
@@ -10,7 +12,8 @@ export default function WhatsAppBtn() {
       target="_blank"
       rel="noopener noreferrer"
       className="
-        fixed bottom-28 right-6 
+        fixed bottom-28 right-6
+        md:bottom-8 lg:bottom-8
         bg-green-500 text-white 
         w-15 h-15 rounded-full shadow-2xl 
         flex items-center justify-center 

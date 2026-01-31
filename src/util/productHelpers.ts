@@ -1,21 +1,40 @@
-import { products, promos, bestSellerProducts } from "@/data";
+import { products, promos, bestSellerProducts } from "@/products.data";
+import { Product } from "@/types";
 
 export function shuffleProducts() {
   return [...products].sort(() => Math.random() - 0.5);
 }
 
-export function filterProducts(list: any[], query: string) {
-  return list.filter(
-    (product) =>
-      product.productName.toLowerCase().includes(query) ||
-      product.ingredients.toLowerCase().includes(query),
-  );
+function normalizeText(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD") // separa letras de acentos
+    .replace(/[\u0300-\u036f]/g, ""); // elimina los acentos
 }
 
-export function getDefaultList(pathname: string, shuffled: any[]) {
+export function filterProducts(list: Product[], query: string) {
+  const normalizedQuery = normalizeText(query);
+
+  return list.filter((product) => {
+    const name = normalizeText(product.productName);
+    const ingredients = normalizeText(product.ingredients);
+
+    const matchCategory = product.category.some((cat) =>
+      normalizeText(cat).includes(normalizedQuery),
+    );
+
+    return (
+      name.includes(normalizedQuery) ||
+      ingredients.includes(normalizedQuery) ||
+      matchCategory
+    );
+  });
+}
+
+export function getDefaultList(pathname: string, shuffled: Product[]) {
   if (pathname === "/") return bestSellerProducts;
-  if (pathname === "/promociones") return promos;
-  return shuffled.slice(0, 10);
+
+  return shuffled.slice(0, 6);
 }
 
 export function getSectionTitle(pathname: string, isSearching: boolean) {

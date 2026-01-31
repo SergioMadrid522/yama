@@ -15,7 +15,7 @@ export interface Product {
   id: number;
   productName: string;
   ingredients: string; //This could be an array but cannot too, check it out
-  category: string;
+  category: string[];
   price: number;
   image: StaticImageData;
   promo?: boolean;
@@ -65,3 +65,4 @@ export type RenderProductsProps = {
 };
 
 export interface ProductCardProps extends Product {}
+//export type ProductCardProps = Product

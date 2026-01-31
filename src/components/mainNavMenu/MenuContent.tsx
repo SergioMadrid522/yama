@@ -12,7 +12,7 @@ export default function MenuContent({
   return (
     <>
       <button
-        className={`bg-transparent cursor-pointer border-0 ${openMenu ? "z-30" : ""}`}
+        className={`bg-transparent cursor-pointer border-0 ${openMenu ? "z-30" : "lg:hidden"}`}
         onClick={handleClick}
       >
         <svg

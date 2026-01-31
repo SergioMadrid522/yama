@@ -3,18 +3,13 @@ import type {
   Features,
   Horario,
   MenuModalOption,
-  Product,
   SecondNavbarIcons,
   Ubicacion,
 } from "@/types";
-/* images */
-import trompoRoll from "@/assets/bestSeller/trompoRoll.webp";
-import arcoirisRoll from "@/assets/bestSeller/arcoirisRoll.webp";
-import cheeseRoll from "@/assets/bestSeller/cheeseRoll.webp";
-import clasicRoll from "@/assets/bestSeller/clasicRoll.webp";
-import ninaFresaRoll from "@/assets/bestSeller/ninaFresaRoll.webp";
 
 export const GLOBAL = {
+  chevronUpIcon:
+    "M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z",
   /* main navbar */
   hamburgerBtnIcon:
     "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5",
@@ -44,6 +39,8 @@ export const GLOBAL = {
     "M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z",
   facebookLink: "https://www.facebook.com/share/1Kfzijwb6n/?mibextid=wwXIfr",
   phoneNumber: "528332350082",
+  whatsAppDefaultMsg:
+    "Hola, vengo de su Menú Digital y me gustaría hacer un pedido.",
 };
 
 export const menuModalOptions: Array<MenuModalOption> = [
@@ -67,295 +64,6 @@ export const secondNavbarIcons: Array<SecondNavbarIcons> = [
     label: "Promos",
     path: "M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3z",
     link: "/promociones",
-  },
-];
-
-export const bestSellerProducts: Array<Product> = [
-  {
-    id: 1,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    promo: true,
-    price: 130,
-    image: trompoRoll,
-  },
-  {
-    id: 2,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
-  },
-  {
-    id: 3,
-    productName: "Arcoiris Roll",
-    ingredients: "Salmón, camarón, masago, y aguacate.",
-    category: "Especialidades YAMA",
-    price: 130,
-    image: arcoirisRoll,
-  },
-  {
-    id: 4,
-    productName: "Classic Roll",
-    ingredients: "Queso crema, pepino y surimi",
-    category: "Clásicos (con alga por afuera)",
-    price: 130,
-    image: clasicRoll,
-    promo: true,
-  },
-  {
-    id: 5,
-    productName: "Chesse Roll",
-    ingredients:
-      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
-    category: "Tradicionales",
-    price: 130,
-    image: cheeseRoll,
-    promo: true,
-  },
-];
-
-export const products: Array<Product> = [
-  {
-    id: 1,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    promo: true,
-    price: 130,
-    image: trompoRoll,
-  },
-  {
-    id: 2,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
-  },
-  {
-    id: 3,
-    productName: "Arcoiris Roll",
-    ingredients: "Salmón, camarón, masago, y aguacate.",
-    category: "Especialidades YAMA",
-    price: 130,
-    image: arcoirisRoll,
-  },
-  {
-    id: 4,
-    productName: "Classic Roll",
-    ingredients: "Queso crema, pepino y surimi",
-    category: "Clásicos (con alga por afuera)",
-    price: 130,
-    image: clasicRoll,
-    promo: true,
-  },
-  {
-    id: 5,
-    productName: "Chesse Roll",
-    ingredients:
-      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
-    category: "Tradicionales",
-    price: 130,
-    image: cheeseRoll,
-    promo: true,
-  },
-  {
-    id: 6,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    promo: true,
-    price: 130,
-    image: trompoRoll,
-  },
-  {
-    id: 7,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
-  },
-  {
-    id: 8,
-    productName: "Arcoiris Roll",
-    ingredients: "Salmón, camarón, masago, y aguacate.",
-    category: "Especialidades YAMA",
-    price: 130,
-    image: arcoirisRoll,
-  },
-  {
-    id: 9,
-    productName: "Classic Roll",
-    ingredients: "Queso crema, pepino y surimi",
-    category: "Clásicos (con alga por afuera)",
-    price: 130,
-    image: clasicRoll,
-    promo: true,
-  },
-  {
-    id: 10,
-    productName: "Chesse Roll",
-    ingredients:
-      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
-    category: "Tradicionales",
-    price: 130,
-    image: cheeseRoll,
-    promo: true,
-  },
-  {
-    id: 11,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    promo: true,
-    price: 130,
-    image: trompoRoll,
-  },
-  {
-    id: 12,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
-  },
-  {
-    id: 13,
-    productName: "Arcoiris Roll",
-    ingredients: "Salmón, camarón, masago, y aguacate.",
-    category: "Especialidades YAMA",
-    price: 130,
-    image: arcoirisRoll,
-  },
-  {
-    id: 14,
-    productName: "Classic Roll",
-    ingredients: "Queso crema, pepino y surimi",
-    category: "Clásicos (con alga por afuera)",
-    price: 130,
-    image: clasicRoll,
-    promo: true,
-  },
-  {
-    id: 15,
-    productName: "Chesse Roll",
-    ingredients:
-      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
-    category: "Tradicionales",
-    price: 130,
-    image: cheeseRoll,
-    promo: true,
-  },
-  {
-    id: 16,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    promo: true,
-    price: 130,
-    image: trompoRoll,
-  },
-  {
-    id: 17,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
-  },
-  {
-    id: 18,
-    productName: "Arcoiris Roll",
-    ingredients: "Salmón, camarón, masago, y aguacate.",
-    category: "Especialidades YAMA",
-    price: 130,
-    image: arcoirisRoll,
-  },
-  {
-    id: 19,
-    productName: "Classic Roll",
-    ingredients: "Queso crema, pepino y surimi",
-    category: "Clásicos (con alga por afuera)",
-    price: 130,
-    image: clasicRoll,
-    promo: true,
-  },
-  {
-    id: 20,
-    productName: "fabian Roll",
-    ingredients:
-      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
-    category: "Tradicionales",
-    price: 130,
-    image: cheeseRoll,
-    promo: true,
-  },
-];
-
-export const promos: Array<Product> = [
-  {
-    id: 1,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    price: 130,
-    image: trompoRoll,
-    promo: true,
-  },
-  {
-    id: 2,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
-  },
-  {
-    id: 3,
-    productName: "Classic Roll",
-    ingredients: "Queso crema, pepino y surimi",
-    category: "Clásicos (con alga por afuera)",
-    price: 130,
-    image: clasicRoll,
-    promo: true,
-  },
-  {
-    id: 4,
-    productName: "Chesse Roll",
-    ingredients:
-      "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
-    category: "Tradicionales",
-    price: 130,
-    image: cheeseRoll,
-    promo: true,
-  },
-  {
-    id: 5,
-    productName: "Trompo Roll",
-    ingredients: "Carne al pastor, piña, queso, manchego, y aguacate.",
-    category: "Empanizados Especiales",
-    price: 130,
-    image: trompoRoll,
-    promo: true,
-  },
-  {
-    id: 6,
-    productName: "Niña Fresa Roll",
-    ingredients: "Queso crema, plátano, cereza mango y fresa.",
-    category: "Frutales",
-    price: 130,
-    image: ninaFresaRoll,
-    promo: true,
   },
 ];
 
@@ -396,7 +104,7 @@ export const aboutData: AboutData = {
   tagline: "Construyendo una historia de sabor en Altamira.",
   stats: [
     { stat: "4.6", label: "Estrellas en Google Maps" },
-    { stat: "+20", label: "Platillos" },
+    { stat: "+90", label: "Platillos" },
     { stat: "+10k", label: "Clientes" },
   ],
 

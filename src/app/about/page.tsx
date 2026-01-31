@@ -7,21 +7,26 @@ export default function About() {
 
   return (
     <main>
-      <section>
-        <div className="relative w-full h-[35vh]">
-          <Image src={banner} alt="Local de YAMA" className="brightness-75" />
-          <div className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-t from-gray-50/50 to-transparent" />
+      <div className="relative w-full h-[35vh]">
+        <Image
+          src={banner}
+          alt="Local de YAMA"
+          fill
+          priority
+          className="object-cover brightness-75"
+        />
 
-          <div className="absolute inset-0 z-20 bg-transparent flex flex-col items-center justify-center">
-            <h1 className="text-white font-brand font-black text-3xl md:text-4xl leading-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-3 uppercase">
-              {years} años
-            </h1>
-            <h2 className="text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-3 leading-relaxed">
-              {tagline}
-            </h2>
-          </div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-gray-50/50 to-transparent" />
+
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
+          <h1 className="text-white font-brand font-black text-3xl md:text-4xl drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-3 uppercase">
+            {years} años
+          </h1>
+          <h2 className="text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] text-center px-4">
+            {tagline}
+          </h2>
         </div>
-      </section>
+      </div>
 
       <section className="relative z-10 -mt-12 px-6">
         <div className=" bg-white rounded-[2rem] p-8 border border-gray-100 relative overflow-hidden">

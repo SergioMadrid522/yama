@@ -1,7 +1,6 @@
 # Missing
 
-- make the page promos and render all the promos
-- make the app responsive for desktop and tablets
+- promos section is not working
 
 # Working on
 
