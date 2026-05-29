@@ -17,7 +17,7 @@ export interface Product {
   ingredients: string; //This could be an array but cannot too, check it out
   category: string[];
   price: number;
-  image: StaticImageData;
+  image: string;
   promo?: boolean;
 }
 

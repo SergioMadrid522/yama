@@ -1,9 +1,18 @@
 /* images */
-import trompoRoll from "@/assets/bestSeller/trompoRoll.webp";
-import arcoirisRoll from "@/assets/bestSeller/arcoirisRoll.webp";
-import cheeseRoll from "@/assets/bestSeller/cheeseRoll.webp";
-import clasicRoll from "@/assets/bestSeller/clasicRoll.webp";
-import ninaFresaRoll from "@/assets/bestSeller/ninaFresaRoll.webp";
+const trompoRoll =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078535/trompoRoll_g7a9i9.webp";
+const arcoirisRoll =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078534/arcoirisRoll_dpoams.webp";
+const cheeseRoll =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078535/cheeseRoll_xg3xho.webp";
+const clasicRoll =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078535/clasicRoll_bnmbgd.webp";
+const ninaFresaRoll =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078534/ninaFresaRoll_mvy00h.webp";
+export const banner =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078521/banner_uc2rcs.webp";
+export const promosImage =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078514/promosImage_ttvi8h.webp";
 import { Product } from "@/types";
 
 export const bestSellerProducts: Array<Product> = [

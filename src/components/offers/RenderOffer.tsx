@@ -1,6 +1,6 @@
+import { promosImage } from "@/products.data";
 import Image from "next/image";
 import Link from "next/link";
-import promosImage from "@/assets/promosImage.webp";
 
 export default function RenderOffer() {
   return (
@@ -19,7 +19,9 @@ export default function RenderOffer() {
           <div className="absolute inset-0 md:static md:w-1/2">
             <Image
               src={promosImage}
-              alt=""
+              width={900}
+              height={900}
+              alt="promos image"
               className="w-full h-full object-cover scale-x-[-1]"
             />
             <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/30 to-transparent" />

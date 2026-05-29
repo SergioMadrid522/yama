@@ -1,6 +1,6 @@
 import { GLOBAL } from "@/data";
+import { banner } from "@/products.data";
 import Image from "next/image";
-import banner from "@/assets/banner.webp";
 
 export default function Header() {
   const { curveLineIcon } = GLOBAL;
@@ -18,7 +18,9 @@ export default function Header() {
           <div className="brightness-75 h-full">
             <Image
               src={banner}
-              alt=""
+              width={900}
+              height={900}
+              alt="yama banner"
               priority
               className="object-cover w-full h-full"
             />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { aboutData, GLOBAL } from "@/data";
-import banner from "@/assets/banner.webp";
+import { banner } from "@/products.data";
+
 export default function About() {
   const { quotesIcon } = GLOBAL;
   const { years, tagline, stats, signOff, team, since } = aboutData;
