@@ -14,9 +14,9 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
   if (isSearching && !hasResults) {
     return (
       <>
-        <h2 className="font-sans font-[900] text-3xl md:text-4xl tracking-tighter text-gray-900 select-none text-center mb-6">
+        <h3 className="font-sans font-[900] text-3xl md:text-4xl tracking-tighter text-gray-900 select-none text-center mb-6">
           Oops...
-        </h2>
+        </h3>
 
         <div className="flex w-full flex-col items-center justify-center text-center min-h-[50vh] md:min-h-[400px]">
           <div className="max-w-md space-y-4">
@@ -34,13 +34,13 @@ export default function RenderProducts({ query = "" }: RenderProductsProps) {
 
   return (
     <>
-      <h2
+      <h3
         className="text-3xl md:text-4xl font-black text-center mb-6 mt-0"
         onTouchStart={dismissKeyboard}
         onWheel={dismissKeyboard}
       >
         {title}
-      </h2>
+      </h3>
 
       <div
         className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"

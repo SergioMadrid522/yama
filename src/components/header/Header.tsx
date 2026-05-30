@@ -18,10 +18,10 @@ export default function Header() {
           <div className="brightness-75 h-full">
             <Image
               src={banner}
-              width={900}
-              height={900}
+              width={1536}
+              height={1024}
               alt="yama banner"
-              priority
+              fetchPriority="high"
               className="object-cover w-full h-full"
             />
           </div>

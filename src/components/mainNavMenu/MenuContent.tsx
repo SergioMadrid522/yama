@@ -12,6 +12,7 @@ export default function MenuContent({
   return (
     <>
       <button
+        aria-label="Menu button"
         className={`bg-transparent cursor-pointer border-0 ${openMenu ? "z-30" : "lg:hidden"}`}
         onClick={handleClick}
       >
