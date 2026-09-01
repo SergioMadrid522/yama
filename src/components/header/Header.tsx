@@ -15,14 +15,16 @@ export default function Header() {
     >
       <div className="relative flex flex-row h-full">
         <div className="relative w-full">
-          <div className="brightness-75 h-full">
+          <div className="brightness-95 h-full">
+            {" "}
+            {/* <div className="brightness-75 h-full"> */}
             <Image
               src={banner}
               width={1536}
               height={1024}
-              alt="yama banner"
+              alt="SAKURA banner"
               fetchPriority="high"
-              className="object-cover w-full h-full"
+              className="object-cover lg:object-cover w-full h-full"
             />
           </div>
 
@@ -35,7 +37,7 @@ export default function Header() {
               lg:px-20
             "
           >
-            <h1
+            {/* <h1
               className="
                 text-white font-brand font-black
                 text-3xl
@@ -79,7 +81,7 @@ export default function Header() {
               </span>
               <br />
               sabor japonés en Altamira
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

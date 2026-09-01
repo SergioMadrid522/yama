@@ -6,6 +6,7 @@ import type {
   SecondNavbarIcons,
   Ubicacion,
 } from "@/types";
+import { locationImage } from "./products.data";
 
 export const GLOBAL = {
   chevronUpIcon:
@@ -37,8 +38,8 @@ export const GLOBAL = {
   /* about us */
   quotesIcon:
     "M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z",
-  facebookLink: "https://www.facebook.com/share/1Kfzijwb6n/?mibextid=wwXIfr",
-  phoneNumber: "528332350082",
+  facebookLink: "https://www.facebook.com/share/1Kfzij",
+  phoneNumber: "528333903699",
   whatsAppDefaultMsg:
     "Hola, vengo de su Menú Digital y me gustaría hacer un pedido.",
 };
@@ -68,12 +69,11 @@ export const secondNavbarIcons: Array<SecondNavbarIcons> = [
 ];
 
 export const ubicacionData: Ubicacion = {
-  iframeLink:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.469528789145!2d-97.90599350000002!3d22.373650300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7fc521a119199%3A0xdf86e28798b2e7d3!2sYama!5e0!3m2!1ses!2smx!4v1769225436008!5m2!1ses!2smx",
-  title: "Monte Alto",
+  iframeLink: locationImage,
+  title: "Altamira Zona centro",
   catchPhrase: "El punto exacto donde termina tu hambre.",
-  address: "Altamira 1003, Monte Alto, 89608 Miramar, Tamps.",
-  mapsLink: "https://maps.app.goo.gl/iHvUtKTAGkuLztvC8",
+  address: "Altamira Zona Centro.",
+  mapsLink: "https://maps.app.goo.gl/jumdxjQeDiEDwZcH8",
 };
 
 export const features: Array<Features> = [
@@ -110,6 +110,6 @@ export const aboutData: AboutData = {
 
   signOff:
     "Gracias por dejarnos ser parte de sus comidas y sus antojos durante casi una década. Vamos por muchos rollos más.",
-  team: "El equipo de YAMA",
+  team: "El equipo de SAKURA",
   since: 2017,
 };

@@ -10,9 +10,12 @@ const clasicRoll =
 const ninaFresaRoll =
   "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078534/ninaFresaRoll_mvy00h.webp";
 export const banner =
-  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078521/banner_uc2rcs.webp";
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1788242788/banner_cyumbd.png";
 export const promosImage =
   "https://res.cloudinary.com/dlhd0iosj/image/upload/v1780078514/promosImage_ttvi8h.webp";
+export const locationImage =
+  "https://res.cloudinary.com/dlhd0iosj/image/upload/v1788243826/Screenshot_2026-09-01_at_12.23.09_a.m._dimj2a.png";
+
 import { Product } from "@/types";
 
 export const bestSellerProducts: Array<Product> = [
@@ -27,7 +30,7 @@ export const bestSellerProducts: Array<Product> = [
   },
   {
     id: 2,
-    productName: "Niña Fresa Roll",
+    productName: "Fresa Roll",
     ingredients: "Queso crema, plátano, cereza mango y fresa.",
     category: ["rollos", "Frutales"],
     price: 130,
@@ -46,7 +49,7 @@ export const bestSellerProducts: Array<Product> = [
   },
   {
     id: 4,
-    productName: "Classic Roll",
+    productName: "Roll Clásico",
     ingredients: "Queso crema, pepino y surimi",
     category: ["rollos", "clasicos"],
     price: 130,
@@ -55,7 +58,7 @@ export const bestSellerProducts: Array<Product> = [
   },
   {
     id: 5,
-    productName: "Chesse Roll",
+    productName: "Queso Roll",
     ingredients:
       "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
     category: ["rollos", "empanizados"],
@@ -68,7 +71,7 @@ export const bestSellerProducts: Array<Product> = [
 export const promos: Array<Product> = [
   {
     id: 1,
-    productName: "Classic Roll",
+    productName: "Roll Clásico",
     ingredients: "Queso crema, pepino, surimi (Con alga por fuera).",
     category: ["rollos", "clasicos"],
     promo: true,
@@ -87,7 +90,7 @@ export const promos: Array<Product> = [
   },
   {
     id: 3,
-    productName: "Surimi Yama",
+    productName: "Surimi SAKURA",
     ingredients:
       "Queso crema, pepino, aguacate, surimi, chipotle (Con alga por fuera).",
     category: ["rollos", "clasicos"],
@@ -144,7 +147,7 @@ export const promos: Array<Product> = [
   },
   {
     id: 9,
-    productName: "Cheese Roll",
+    productName: "Queso Roll",
     ingredients:
       "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
     category: ["rollos", "tradicionales"],
@@ -382,7 +385,7 @@ export const promos: Array<Product> = [
   },
   {
     id: 34,
-    productName: "Oreo Roll",
+    productName: "Roll de Oreo",
     ingredients:
       "Fresa, plátano, mango, queso crema y la clásica galleta oreo por fuera.",
     category: ["rollos", "frutales"],
@@ -398,7 +401,7 @@ export const products: Array<Product> = [
   // CLÁSICOS
   {
     id: 1,
-    productName: "Classic Roll",
+    productName: "Roll Clásico",
     ingredients: "Queso crema, pepino, surimi (Con alga por fuera).",
     category: ["rollos", "clasicos"],
     promo: true,
@@ -417,7 +420,7 @@ export const products: Array<Product> = [
   },
   {
     id: 3,
-    productName: "Surimi Yama",
+    productName: "Surimi SAKURA",
     ingredients:
       "Queso crema, pepino, aguacate, surimi, chipotle (Con alga por fuera).",
     category: ["rollos", "clasicos"],
@@ -474,7 +477,7 @@ export const products: Array<Product> = [
   },
   {
     id: 9,
-    productName: "Cheese Roll",
+    productName: "Queso Roll",
     ingredients:
       "Chile serrano, queso manchego, queso crema, surimi y aguacate.",
     category: ["rollos", "tradicionales"],
@@ -712,7 +715,7 @@ export const products: Array<Product> = [
   },
   {
     id: 34,
-    productName: "Oreo Roll",
+    productName: "Roll de Oreo",
     ingredients:
       "Fresa, plátano, mango, queso crema y la clásica galleta oreo por fuera.",
     category: ["rollos", "frutales"],
@@ -758,7 +761,7 @@ export const products: Array<Product> = [
   },
   {
     id: 39,
-    productName: "Tokio Roll",
+    productName: "Roll de Tokio",
     ingredients: "Queso crema, pepino, surimi, aguacate y masago por fuera.",
     category: ["rollos", "especialidades"],
     price: 160,
@@ -799,7 +802,7 @@ export const products: Array<Product> = [
     image: clasicRoll,
   },
 
-  // ESPECIALIDADES YAMA
+  // ESPECIALIDADES SAKURA
   {
     id: 44,
     productName: "Special Gady Roll",
@@ -810,7 +813,7 @@ export const products: Array<Product> = [
   },
   {
     id: 45,
-    productName: "Salmón Spicy Yama",
+    productName: "Salmón Spicy SAKURA",
     ingredients: "Queso crema, aguacate y salmón spicy por fuera.",
     category: ["rollos", "especialidades yama"],
     price: 180,
@@ -853,7 +856,7 @@ export const products: Array<Product> = [
   },
   {
     id: 50,
-    productName: "Maki Monterrey",
+    productName: "Maki Monterey",
     ingredients:
       "Rollo empanizado y por dentro zanahoria dulce, queso crema, aguacate, arrachera y manchego.",
     category: ["rollos", "especialidades yama"],
@@ -930,7 +933,7 @@ export const products: Array<Product> = [
   {
     id: 59,
     productName: "Pollo al Panko",
-    ingredients: "Receta de Yama. 7 tiras de pollo.",
+    ingredients: "Receta de SAKURA. 7 tiras de pollo.",
     category: ["entrada", "entradas"],
     price: 200,
     image: cheeseRoll,
@@ -945,7 +948,7 @@ export const products: Array<Product> = [
   },
   {
     id: 61,
-    productName: "Ensalada Yama",
+    productName: "Ensalada SAKURA",
     ingredients:
       "Pepino en forma de diamante, surimi, ajonjolí y vinagre preparado.",
     category: ["ensalada", "ensaladas"],
@@ -1039,7 +1042,7 @@ export const products: Array<Product> = [
   },
   {
     id: 72,
-    productName: "Pollo Agridulce Yama",
+    productName: "Pollo Agridulce SAKURA",
     ingredients: "Porción individual de medio litro.",
     category: ["guisos", "guisos clasicos"],
     price: 140,
@@ -1283,7 +1286,7 @@ export const products: Array<Product> = [
   },
   {
     id: 101,
-    productName: "Banana Yama (Postre)",
+    productName: "Banana SAKURA (Postre)",
     ingredients: "Plátano frito y manchego.",
     category: ["platano frito", "frito", "postres"], // Lo puse en bebidas y postres para que salga en "Otros" o Postre]s
     price: 65,
