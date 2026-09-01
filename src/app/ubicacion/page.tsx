@@ -1,20 +1,18 @@
 import Features from "@/components/locationPage/Features";
 import { GLOBAL, ubicacionData } from "@/data";
+import { locationImage } from "@/products.data";
+import Image from "next/image";
 
 export default function Location() {
   const { locationIcon } = GLOBAL;
-  const { title, iframeLink, catchPhrase, mapsLink, address } = ubicacionData;
+  const { title, catchPhrase, mapsLink, address } = ubicacionData;
 
   return (
     <main>
       {/* MAPA */}
-      <div className="w-full relative h-[35vh] md:h-[45vh] lg:h-[55vh]">
-        <iframe
-          src={iframeLink}
-          className="w-full h-full object-cover border-0 brightness-90"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+      <div className="relative w-full h-[35vh] md:h-[45vh] lg:h-[55vh]">
+        <Image src={locationImage} alt={title} fill className="object-cover" />
+
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-gray-50/50 to-transparent" />
       </div>
 

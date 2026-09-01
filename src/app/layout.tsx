@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Menú | Yama Japanese Food",
+  title: "Menú | SAKURA Sushi Restaurant",
   description:
-    "Menú oficial de Yama Japanese Food. Conoce nuestros platillos, precios y promociones vigentes. Ubicados en Altamira 1003, Monte Alto, 89608 Miramar, Tamps.",
+    "Menú oficial de SAKURA Sushi Restaurant. Conoce nuestros platillos, precios y promociones vigentes. Ubicados en Altamira Zona centro.",
 };
 export const viewport: Viewport = {
   width: "device-width",

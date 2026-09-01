@@ -11,7 +11,7 @@ export default function About() {
       <div className="relative w-full h-[35vh]">
         <Image
           src={banner}
-          alt="Local de YAMA"
+          alt="Local de SAKURA"
           fill
           priority
           className="object-cover brightness-75"
@@ -40,10 +40,10 @@ export default function About() {
             </div>
             <p className="text-lg">
               Lo que comenzó hace 9 años como un pequeño sueño, hoy es el lugar
-              favorito de muchísimas personas en Monte Alto y la Zona Conurbada.
+              favorito de muchísimas personas en la zona centro de Altamira.
             </p>
             <p className="text-lg">
-              En Yama, creemos que el sushi no tiene que ser pretencioso para
+              En SAKURA, creemos que el sushi no tiene que ser pretencioso para
               ser delicioso. Nuestra <strong>misión</strong> siempre ha sido
               simple: ingredientes frescos, porciones generosas y ese toque
               casero que nos hace únicos."

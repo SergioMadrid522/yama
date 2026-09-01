@@ -16,9 +16,11 @@ export default function Footer() {
           >
             <path d={locationIcon} />
           </svg>
-          Av. Altamira #1003 Monte Alto
+          Altamira Zona centro.
         </p>
-        <p className="text-gray-300 text-lg">Yama Japanese Food © 2026</p>
+        <p className="text-gray-300 text-lg">
+          SAKURA | Sushi Restaurant © 2026
+        </p>
       </div>
     </footer>
   );

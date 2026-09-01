@@ -20,11 +20,11 @@ export default function MainNavbar() {
         onClick={() => setOpenMenu(false)}
       >
         <h1 className="font-sans font-[900] text-3xl tracking-tighter text-gray-900 select-none">
-          YAMA
+          SAKURA
         </h1>
-        <div className="absolute bg-red-500 -top-[2.4px] right-[32.5px] w-2.5 h-2.5 rounded-full md:right-[32px] lg:right-[29px]" />
+
         <span className="text-[0.6rem] uppercase tracking-widest -mt-1 text-gray-500">
-          Japanese Food
+          Sushi Restaurant
         </span>
       </Link>
 
